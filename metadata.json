@@ -1,0 +1,5 @@
+{
+  "name": "Texas Hold'em",
+  "description": "A premium offline Texas Hold'em Poker application featuring smart local bots, real-time hand analysis, and a casino-style aesthetic.",
+  "requestFramePermissions": []
+}

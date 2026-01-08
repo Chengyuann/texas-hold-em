@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>单机德州扑克</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+      body {
+        font-family: 'Noto Sans SC', sans-serif;
+        background-color: #0f172a;
+      }
+      .felt-bg {
+        background: radial-gradient(circle, #35654d 0%, #1e3a2f 100%);
+        box-shadow: inset 0 0 100px #000000;
+      }
+      .card-shadow {
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      }
+      .perspective-table {
+        transform: perspective(1000px) rotateX(10deg);
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1f2937; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4b5563; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body class="text-white overflow-hidden h-screen w-screen selection:bg-yellow-500 selection:text-black">
+    <div id="root"></div>
+  </body>
+</html>
