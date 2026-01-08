@@ -1,20 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/drive/1vnJJ7tZEHmSd6VeaiPXBcUHhWPXCl7dP
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+📱 App 描述
+这是一款竞技锦标赛风格的德州扑克游戏，专为提供极致的单人（人机对战）体验而设计，同时具备联机房间的 UI 框架。
+核心玩法与特色：
+锦标赛模式 (Last Man Standing)：
+游戏不再是无限筹码的现金局。采用了残酷的淘汰制规则。
+当玩家或 AI 筹码归零时，将被标记为“破产（BUSTED）”并踢出局。
+游戏持续进行，盲注轮转跳过淘汰者，直到决出最后唯一的冠军。
+智能拟人化 AI：
+内置 5 个高智商 AI 对手（以 Tom Dwan, Phil Ivey 等扑克大神命名）。
+动态思考：AI 不会秒出牌，而是根据决策难度（弃牌快、诈唬/全压慢）模拟人类的思考时间，制造紧张感。
+数学逻辑：AI 懂得计算底池赔率 (Pot Odds)，在短码时会采取“不成功便成仁 (All-in or Fold)”策略，也会偶尔进行诈唬。
+专业级视觉体验：
+采用深绿色毛毡背景、径向光照和拟物化筹码，营造高端赌场氛围。
+流畅的发牌动画、赢家高亮、筹码飞入底池的视觉反馈。
+适配移动端与桌面端的响应式布局。
+辅助决策系统：
+实时计算玩家手牌胜率，并提供类似“起手牌强劲，建议加注”的文字建议，帮助新手学习。
+🚀 项目介绍：实用性、创意性与技术深度
+1. 实用性 (Utility)
+零门槛的扑克教练：不同于复杂的博彩软件，本项目是一个纯粹的、无风险的德州扑克模拟器。内置的“手牌分析”功能充当了实时教练的角色，帮助初学者理解起手牌范围（Ranges）和底池赔率概念，极具教育意义。
+极致的碎片时间消遣：基于 Web 技术构建，无需下载安装，打开浏览器即可在手机或电脑上开启一局快节奏的锦标赛，完美填充用户的碎片时间。
+离线优先体验：核心逻辑完全运行在前端，即便没有网络也能获得流畅的人机对战体验，解决了传统棋牌游戏依赖服务器、弱网体验差的痛点。
+2. 创意性 (Creativity)
+赋予 AI“人性”：大多数扑克游戏的 Bot 只是冷冰冰的概率机器。本项目通过引入thinkingTime（动态思考时间）和BotDecision（带理由的决策系统），让 AI 显得犹豫、果断或狡猾。当 AI 全压前“思考”了 3 秒，玩家会真实地感受到压力。
+沉浸式叙事设计：从进入大厅的“Premium Edition”字样，到座位上的虚拟形象，再到淘汰时的灰显效果和最终的冠军加冕画面，项目构建了一个完整的竞技叙事闭环，而不仅仅是简单的打牌功能。
+可视化反馈设计：通过 CSS 动画模拟真实牌桌的物理交互（如卡牌翻转、光影变化），在 2D 网页中构建了准 3D 的空间感。
+3. 技术深度 (Technical Depth)
+复杂的状态机管理：
+利用 React useState 和 useEffect 构建了一个严密的有限状态机（FSM）。精确控制了从 PREFLOP 到 RIVER 的各个阶段流转、复杂的边池（Side Pot）逻辑雏形、以及在玩家淘汰后动态调整庄家（Dealer）和盲注（Blinds）位置的算法。
+启发式 AI 算法：
+不依赖后端 API，纯前端实现了一套混合决策算法。结合了蒙特卡洛模拟的简化版（牌力评估）与行为树逻辑（基于筹码深度和底池比例的决策），在性能与智能之间取得了完美的平衡。
+高性能手牌评估器：
+实现了一套高效的扑克比牌算法，能够在毫秒级时间内对 7 张牌进行排列组合，精准识别同花顺、葫芦等所有牌型并进行大小排序。
+现代化前端架构：
+使用 React 19 和 Tailwind CSS，代码结构清晰，组件化程度高（PlayerSeat, CardDisplay, GameLog 分离），具备极高的可维护性和扩展性。
