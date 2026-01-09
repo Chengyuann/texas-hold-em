@@ -4,6 +4,8 @@
 
 这是一款专为提供极致单人体验而设计的竞技锦标赛风格德州扑克游戏，同时具备完整的联机房间 UI 框架。本作品在传统扑克游戏基础上进行了多项创新，融合了人工智能算法与现代化前端技术，打造出既具教育意义又充满娱乐性的扑克模拟平台。
 
+<img width="1905" height="627" alt="image截图" src="https://github.com/user-attachments/assets/cb50af09-0f13-4286-8b34-f72ce690def5" />
+
 ### 🎯 核心玩法与特色
 
 #### 锦标赛模式 (Last Man Standing)
@@ -58,9 +60,9 @@
 
 该项目不仅是一个功能完整的扑克游戏，更是一个展示前端技术潜力的优秀案例，为类似复杂的浏览器应用开发提供了有价值的参考架构和实施经验。
 
-> **技术架构说明**：本项目由阿里云 ESA 提供加速、计算和保护支持，确保了游戏的稳定运行和优异性能。
+> **技术架构说明**：本项目由阿里云ESA提供加速、计算和保护。
 
-<img width="7534" height="844" alt="游戏界面截图" src="https://github.com/user-attachments/assets/6ff591cc-305c-460b-9cc7-565ab302a5cd" style="max-width: 100%; height: auto;" />
+<img width="7534" height="844" alt="说明" src="https://github.com/user-attachments/assets/6ff591cc-305c-460b-9cc7-565ab302a5cd" style="max-width: 100%; height: auto;" />
 
 ---
 *文档更新日期：2026年1月9日 | 技术栈：React 19 + Tailwind CSS + 自定义 AI 引擎*
